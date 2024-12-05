@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        
+        body{
+            background-color: aliceblue;
+            padding: 50px;
+        }
+
+        .messageWrapper{
+            width: auto;
+            height: auto;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 10px;
+            background-color: #fefefe;
+            padding: 30px;
+            margin: 20px 0;
+
+            h3{
+                font-size: 1.25rem;
+                margin-bottom: 10px;
+            }
+
+            p{
+                margin-bottom: 10px;
+                font-size: 1.1rem;
+            }
+        }
+        .close{
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: #10b981;
+            transition: 0.3s;
+            color: #fefefe;
+        }
+        .close:hover{
+            background-color: #34d399;
+        }
+    </style>
+</head>
+<body>
+    <div class="messageWrapper">
+        <h3><%=message.user%></h3>
+        <p><%=message.text%></p>
+        <p><%=message.added.toLocaleString()%></p>
+    </div>
+    <div class="button">
+        <a href="/" class="close">Back to main page</a>
+    </div>
+</body>
+</html>

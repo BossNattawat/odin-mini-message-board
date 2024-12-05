@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        
+        body{
+            background-color: aliceblue;
+            padding: 50px;
+        }
+
+        .formWrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        form{
+            display: flex;
+            flex-direction: column;
+
+            label{
+                font-size: 1.3rem;
+                margin-bottom: 10px;
+            }
+            
+            input, textarea{
+                padding: 10px 20px;
+                margin-bottom: 20px;
+                font-size: 1.25rem;
+                border-radius: 10px;
+            }
+
+            button{
+                padding: 10px 20px;
+                margin-bottom: 20px;
+                font-size: 1.25rem;
+                font-weight: 700;
+                border-radius: 10px;
+                cursor: pointer;
+                border: none;
+                background-color: #10b981;
+                transition: 0.3s;
+                color: #fefefe;
+            }
+
+            button:hover{
+                background-color: #34d399;
+            }
+        }
+
+        header{
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        a{
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: #64748b;
+            transition: 0.3s;
+            color: #fefefe;
+        }
+        a:hover{
+            background-color: #94a3b8;
+        }
+
+        .button{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><%=title%></h1>
+    </header>
+    <div class="formWrapper">
+        <form method="POST" action="/new">
+            <label for="author">Author</label>
+            <input type="text" placeholder="Author" id="user" name="user" required>
+            <label for="text">Text</label>
+            <textarea rows="7" cols="50" placeholder="Text" id="text" name="text" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="button">
+        <a href="/">Back to main page</a>
+    </div>
+</body>
+</html>
